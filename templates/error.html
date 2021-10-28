@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body style="background-color: #F0F8FF;">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div style="margin: 200px;">
+                <h2 style="color: red; font-size: 3em; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    {{ message }}
+                </h2>
+                <a style=" margin: 1px;" href="/login">return to login page</a>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/styles.css" rel="stylesheet">
+        <title>Home Page</title>
+    </head>
+    <br>
+        <div class="header">
+            <a href="/about">ABOUT COMPUTER</a>
+            <a href="/parts">COMPUTER PARTS</a>
+            <a href="/types">COMPUTER TYPES</a>
+            {% if current_user.id %}
+            <a style="position: absolute; right: 5px;" href="/logout">Logout</a>
+            <a href="/images">Images</a>
+            {% else %}
+            <a style="position: absolute; right: 5px;" href="/login">Login</a>
+            <a style="position: absolute; left: 5px;" href="/register">Register</a>
+            {% endif %}
+        </div>
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <div style="opacity:0.7; background-color: #E0FFFF; " class="alert alert-info center marginn" role="alert">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+        {% endwith %}
+    <body>
+        <br>
+        <div class="margin">
+            <h3>
+                WHAT IS COMPUTER ??
+            </h3>
+            <div style="position: sticky; top: 5px; ">
+            {% if current_user.name %}
+            <p style="position: absolute; right: 10px;">Welcome {{ current_user.name }}</p>
+            {% endif %}
+            </div>
+            <hr>
+            <p>
+                A computer is a programmable device that stores, retrieves, and processes data. The term "computer" was originally given to<br> humans (human computers) who performed numerical calculations using mechanical calculators, such as the abacus and<br> slide rule. The term was later given to a mechanical device as they began replacing the human computers. Today's computers<br> are electronic devices that accept data (input), process that data, produce output, and store (storage) the results.
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="center">
+            <img src="http://logicalincrements.com/assets/img/articles/build-pc-case-comparison-chart/pc-computer-case-cover-image.jpg">
+        </div>
+        <br>
+        <div>
+            <br>
+            <h3 class="margin">
+                    SITE COMPONENT
+            </h3>
+            <ul>
+                <li>
+                    ABOUT COMPUTER
+                </li>
+                <li>
+                    COMPUTER PARTS
+                </li>
+                <li>
+                    COMPUTER TYPES
+                </li>
+            </ul>
+        </div>
+        <br>
+    </body>
+</html>

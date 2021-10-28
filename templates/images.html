@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <title>Images</title>
+</head>
+<br>
+    <div class="header">
+            <a href="/">Home</a>
+            <a href="/upload">Upload Image</a>
+            {% if data %}
+            <a href="/delete">Delete Image</a>
+            {% endif %}
+            <a style="position: absolute; right: 5px;" href="/logout">Logout</a>
+    </div>
+<body>
+    {% for image in data %}
+    <div style="position: relative; left: 250px; margin: 10px;">
+    <img style="width: 1000px; height: 1000px;" src="{{image.path}}" alt="">
+    <h3>{{image.name}}</h3>
+    </div>
+    {% endfor %}
+    <script src="/static/script/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+a
+{
+   color: blue;
+   margin: 20px;
+   font-family: cursive;
+}
+.header
+{
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+h3
+{
+    text-align: left;
+    font-family: Verdana,sans-serif;
+    margin: 10px;
+}
+p
+{
+    font-family: Lucida;
+    font-size: 20px;
+    margin: 5px;
+}
+.center
+{
+    text-align: center;
+}
+.right
+{
+    text-align: right;
+   /* margin-right: 200px;*/
+}
+.left
+{
+    text-align: left;
+}
+.size
+{
+    width: 1200px;
+    height: 608px;
+}
+.margin
+{
+    margin-left: 20px;
+}
+td
+{
+    text-align: left;
+}
+table ,th, td
+{
+    border-collapse: collapse;
+    border: 3px dotted black;
+    margin: 20px;
+    padding: 10px;
+}
+.tablee
+{
+    margin-left: 450px;
+}
+.marginn
+{
+    margin: 20px;
+}
